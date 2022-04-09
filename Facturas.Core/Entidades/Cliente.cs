@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Facturas.Api.Model
+namespace Facturas.Core
 {
     public class Cliente
     {

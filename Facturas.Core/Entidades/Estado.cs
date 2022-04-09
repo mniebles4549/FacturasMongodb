@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Facturas.Api.Model
+namespace Facturas.Core
 {
     public class Estado
     {

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Facturas.Core\Facturas.Core.csproj" />
+    <ProjectReference Include="..\Facturas.Infraestructura\Facturas.Infraestructura.csproj" />
+  </ItemGroup>
+
+</Project>

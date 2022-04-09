@@ -2,8 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
-
-namespace Facturas.Api.Model
+namespace Facturas.Core
 {
     public class Factura
     {

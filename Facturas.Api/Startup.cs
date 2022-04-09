@@ -1,3 +1,6 @@
+using Facturas.Core;
+using Facturas.Infraestructura;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +31,11 @@ namespace Facturas.Api
         {
 
             services.AddControllers();
+            services.AddSingleton<IMongoClient, MongoClient>(sp => new MongoClient(Configuration.GetConnectionString("MongoDb")));
+            services.AddTransient<IClienteCollection, ClienteCollection>();
+  
+
+            services.AddMediatR(typeof(NuevoCliente).Assembly);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Facturas.Api", Version = "v1" });
