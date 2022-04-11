@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Facturas.Core
 {
-    public interface IClienteCollection
+    public interface ISaveCollection
     {
         //Task<List<Factura>> GetAll();
         //Task<string> GetEstadoCliente(string clienteId);

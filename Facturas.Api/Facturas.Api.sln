@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturas.Api", "Facturas.Api.csproj", "{DA1F340E-1AB2-43E2-9605-4C82EEF21682}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturas.Core", "..\Facturas.Core\Facturas.Core.csproj", "{B63C9AD2-DE69-4B2C-BCB4-94305E67BCC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturas.Core", "..\Facturas.Core\Facturas.Core.csproj", "{B63C9AD2-DE69-4B2C-BCB4-94305E67BCC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturas.Infraestructura", "..\Facturas.Infraestructura\Facturas.Infraestructura.csproj", "{E60C1114-E4B3-4388-ADCF-579D80A20411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturas.Infraestructura", "..\Facturas.Infraestructura\Facturas.Infraestructura.csproj", "{E60C1114-E4B3-4388-ADCF-579D80A20411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturas.Persistencias", "..\Facturas.Persistencias\Facturas.Persistencias.csproj", "{933495A9-E76E-4625-B2DF-1FBC7BEB6C9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturas.Aplicacion", "..\Facturas.Persistencias\Facturas.Aplicacion.csproj", "{933495A9-E76E-4625-B2DF-1FBC7BEB6C9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicios", "Servicios", "{906D736A-E26D-4260-B93B-4166F839E475}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facturas", "Facturas", "{53905B3F-214C-4B34-9601-90C7B5A05A74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA1F340E-1AB2-43E2-9605-4C82EEF21682} = {53905B3F-214C-4B34-9601-90C7B5A05A74}
+		{B63C9AD2-DE69-4B2C-BCB4-94305E67BCC3} = {53905B3F-214C-4B34-9601-90C7B5A05A74}
+		{E60C1114-E4B3-4388-ADCF-579D80A20411} = {53905B3F-214C-4B34-9601-90C7B5A05A74}
+		{933495A9-E76E-4625-B2DF-1FBC7BEB6C9E} = {53905B3F-214C-4B34-9601-90C7B5A05A74}
+		{53905B3F-214C-4B34-9601-90C7B5A05A74} = {906D736A-E26D-4260-B93B-4166F839E475}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {633116A7-F127-444A-8D6A-8FBCC23BA723}

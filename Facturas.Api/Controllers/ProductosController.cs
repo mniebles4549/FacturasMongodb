@@ -1,4 +1,5 @@
-﻿using Facturas.Infraestructura;
+﻿using Facturas.Aplicacion;
+using Facturas.Infraestructura;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,14 +20,14 @@ namespace Facturas.Api.Controllers
         {
             _mediator = mediator;
         }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpPost]
         public async Task<IActionResult> Crear()
         {
-            var producto = new NuevoProducto.Ejecuta()
+            var producto = new CrearProductoComando()
             {
-                IdProducto = "000000000000000000000001",
-                Nombre = "Mango",
-                Precio = 2000
+                IdProducto = "000000000000000000000001",Nombre = "Mango",Precio = 2000
             };
             await _mediator.Send(producto);
             return Ok();

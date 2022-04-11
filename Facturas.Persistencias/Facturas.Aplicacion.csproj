@@ -9,4 +9,8 @@
     <ProjectReference Include="..\Facturas.Infraestructura\Facturas.Infraestructura.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Aplicacion\Resolver\ConsultaResolver\" />
+  </ItemGroup>
+
 </Project>

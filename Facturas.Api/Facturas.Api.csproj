@@ -12,7 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Facturas.Core\Facturas.Core.csproj" />
     <ProjectReference Include="..\Facturas.Infraestructura\Facturas.Infraestructura.csproj" />
-    <ProjectReference Include="..\Facturas.Persistencias\Facturas.Persistencias.csproj" />
+    <ProjectReference Include="..\Facturas.Persistencias\Facturas.Aplicacion.csproj" />
   </ItemGroup>
 
   <ItemGroup>

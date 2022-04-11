@@ -1,10 +1,11 @@
-﻿using Facturas.Core;
+﻿using Facturas.Aplicacion;
+using Facturas.Core;
 using Facturas.Infraestructura;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using static Facturas.Infraestructura.NuevoCliente;
 
 namespace Facturas.Api.Controllers
 {
@@ -20,22 +21,22 @@ namespace Facturas.Api.Controllers
             _mediator = mediator;
         }
 
-
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpPost]
         public async Task<IActionResult> Crear()
         {
-            var listaClientes = new List<NuevoCliente.Ejecuta>();
-            listaClientes.Add(new NuevoCliente.Ejecuta
+            var listaClientes = new List<CrearClienteComando>();
+            listaClientes.Add(new CrearClienteComando
             {
                 IdCliente = "000000000000000000000001",Ciudad ="Barranquilla",Nombre = "Michel Niebles", Nit = 101,Estado = 1
             });
-            listaClientes.Add(new NuevoCliente.Ejecuta
+            listaClientes.Add(new CrearClienteComando
             {
-                IdCliente = "000000000000000000000002",Ciudad ="Bogota",Nombre = "Jose Canseco",Nit = 101,Estado = 1
+                IdCliente = "000000000000000000000002",Ciudad ="Bogota",Nombre = "Jose Canseco",Nit = 102,Estado = 1
             });
-            listaClientes.Add(new NuevoCliente.Ejecuta
+            listaClientes.Add(new CrearClienteComando
             {
-                IdCliente = "000000000000000000000003",Ciudad ="Medellin",Nombre = "Andrea Martinez",Nit = 101,Estado = 1
+                IdCliente = "000000000000000000000003",Ciudad ="Medellin",Nombre = "Andrea Martinez",Nit = 103,Estado = 1
             });
             foreach (var cliente in listaClientes)
             {
